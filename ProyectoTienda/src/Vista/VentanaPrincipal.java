@@ -8,25 +8,26 @@ import javax.swing.JPanel;
 public class VentanaPrincipal extends javax.swing.JFrame {
 
 //private CardLayout orientacionDelContenido = new CardLayout();
-private JPanel contenedorAsistencia = new contenedorAsistencia();
-private JPanel contenedorVenta = new contenedorVenta();
-private JPanel contenedorProveedores = new contenedorProveedor();
-private JPanel contenedorProductos = new contenedorProductos();
-private JPanel contenedorEmpleados = new contenedorEmpleado();
-private JPanel contenedorCorteCaja = new contenedorCorteCaja();
+  private JPanel contenedorAsistencia = new contenedorAsistencia();
+  private JPanel contenedorVenta = new contenedorVenta();
+  private JPanel contenedorProveedores = new contenedorProveedor();
+  private JPanel contenedorProductos = new contenedorProductos();
+  private JPanel contenedorEmpleados = new contenedorEmpleado();
+  private JPanel contenedorCorteCaja = new contenedorCorteCaja();
+  private JPanel contenedorPedido = new contenedorPedidoProducto();
 
 //private JPanel contenedorProductos = new con();
-public VentanaPrincipal() {
-	initComponents();
+  public VentanaPrincipal() {
+    initComponents();
 
 //Agrega la vista inicial del punto de venta
-	contenedorPrincipal.add(contenedorVenta);
+    contenedorPrincipal.add(contenedorVenta);
 
 //Maximiza la pantalla
-	setExtendedState(this.MAXIMIZED_BOTH);
-}
+    setExtendedState(this.MAXIMIZED_BOTH);
+  }
 
-@SuppressWarnings("unchecked")
+  @SuppressWarnings("unchecked")
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
     java.awt.GridBagConstraints gridBagConstraints;
@@ -41,6 +42,7 @@ public VentanaPrincipal() {
     btnProductos = new javax.swing.JButton();
     btnEmpleados = new javax.swing.JButton();
     btnCorteCaja = new javax.swing.JButton();
+    btnPedido = new javax.swing.JButton();
     panelDeContenido = new javax.swing.JPanel();
     contenedorTitulo = new javax.swing.JPanel();
     lblTitulo = new javax.swing.JLabel();
@@ -66,10 +68,9 @@ public VentanaPrincipal() {
     gridBagConstraints = new java.awt.GridBagConstraints();
     gridBagConstraints.gridx = 0;
     gridBagConstraints.gridy = 0;
-    gridBagConstraints.ipadx = 52;
-    gridBagConstraints.ipady = 26;
+    gridBagConstraints.ipadx = 2;
+    gridBagConstraints.ipady = -18;
     gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-    gridBagConstraints.insets = new java.awt.Insets(6, 0, 0, 0);
     contenedorMenu.add(icono, gridBagConstraints);
 
     btnAsistencia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Clientes.png"))); // NOI18N
@@ -82,7 +83,8 @@ public VentanaPrincipal() {
     gridBagConstraints = new java.awt.GridBagConstraints();
     gridBagConstraints.gridx = 0;
     gridBagConstraints.gridy = 1;
-    gridBagConstraints.ipadx = 105;
+    gridBagConstraints.gridwidth = 4;
+    gridBagConstraints.ipadx = 55;
     gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
     gridBagConstraints.insets = new java.awt.Insets(41, 0, 0, 0);
     contenedorMenu.add(btnAsistencia, gridBagConstraints);
@@ -97,7 +99,8 @@ public VentanaPrincipal() {
     gridBagConstraints = new java.awt.GridBagConstraints();
     gridBagConstraints.gridx = 0;
     gridBagConstraints.gridy = 2;
-    gridBagConstraints.ipadx = 106;
+    gridBagConstraints.gridwidth = 2;
+    gridBagConstraints.ipadx = 56;
     gridBagConstraints.ipady = -8;
     gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
     gridBagConstraints.insets = new java.awt.Insets(32, 0, 0, 0);
@@ -113,7 +116,8 @@ public VentanaPrincipal() {
     gridBagConstraints = new java.awt.GridBagConstraints();
     gridBagConstraints.gridx = 0;
     gridBagConstraints.gridy = 3;
-    gridBagConstraints.ipadx = 91;
+    gridBagConstraints.gridwidth = 6;
+    gridBagConstraints.ipadx = 41;
     gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
     gridBagConstraints.insets = new java.awt.Insets(46, 0, 0, 0);
     contenedorMenu.add(btnProveedores, gridBagConstraints);
@@ -128,7 +132,8 @@ public VentanaPrincipal() {
     gridBagConstraints = new java.awt.GridBagConstraints();
     gridBagConstraints.gridx = 0;
     gridBagConstraints.gridy = 4;
-    gridBagConstraints.ipadx = 102;
+    gridBagConstraints.gridwidth = 3;
+    gridBagConstraints.ipadx = 52;
     gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
     gridBagConstraints.insets = new java.awt.Insets(35, 0, 0, 0);
     contenedorMenu.add(btnProductos, gridBagConstraints);
@@ -143,7 +148,8 @@ public VentanaPrincipal() {
     gridBagConstraints = new java.awt.GridBagConstraints();
     gridBagConstraints.gridx = 0;
     gridBagConstraints.gridy = 5;
-    gridBagConstraints.ipadx = 100;
+    gridBagConstraints.gridwidth = 5;
+    gridBagConstraints.ipadx = 50;
     gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
     gridBagConstraints.insets = new java.awt.Insets(36, 0, 0, 0);
     contenedorMenu.add(btnEmpleados, gridBagConstraints);
@@ -158,11 +164,27 @@ public VentanaPrincipal() {
     gridBagConstraints = new java.awt.GridBagConstraints();
     gridBagConstraints.gridx = 0;
     gridBagConstraints.gridy = 6;
-    gridBagConstraints.ipadx = 93;
+    gridBagConstraints.gridwidth = 7;
+    gridBagConstraints.ipadx = 43;
     gridBagConstraints.ipady = 12;
     gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-    gridBagConstraints.insets = new java.awt.Insets(30, 0, 92, 0);
+    gridBagConstraints.insets = new java.awt.Insets(30, 0, 0, 34);
     contenedorMenu.add(btnCorteCaja, gridBagConstraints);
+
+    btnPedido.setText("Pedido de producto");
+    btnPedido.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnPedidoActionPerformed(evt);
+      }
+    });
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 0;
+    gridBagConstraints.gridy = 7;
+    gridBagConstraints.gridwidth = 7;
+    gridBagConstraints.ipadx = 32;
+    gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+    gridBagConstraints.insets = new java.awt.Insets(12, 0, 7, 34);
+    contenedorMenu.add(btnPedido, gridBagConstraints);
 
     panelPrincipal.add(contenedorMenu);
 
@@ -209,93 +231,101 @@ public VentanaPrincipal() {
   }// </editor-fold>//GEN-END:initComponents
 
   private void btnAsistenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsistenciaActionPerformed
-		limpiarContenido();
-		contenedorPrincipal.removeAll();
-		contenedorPrincipal.add(contenedorAsistencia);
-		actualizarContenido();
+    limpiarContenido();
+    contenedorPrincipal.removeAll();
+    contenedorPrincipal.add(contenedorAsistencia);
+    actualizarContenido();
   }//GEN-LAST:event_btnAsistenciaActionPerformed
 
   private void btnVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentaActionPerformed
-		limpiarContenido();
-		contenedorPrincipal.removeAll();
-		contenedorPrincipal.add(contenedorVenta);
-		actualizarContenido();
+    limpiarContenido();
+    contenedorPrincipal.removeAll();
+    contenedorPrincipal.add(contenedorVenta);
+    actualizarContenido();
   }//GEN-LAST:event_btnVentaActionPerformed
 
   private void btnProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedoresActionPerformed
-		limpiarContenido();
-		contenedorPrincipal.removeAll();
-		contenedorPrincipal.add(contenedorProveedores);
-		actualizarContenido();
+    limpiarContenido();
+    contenedorPrincipal.removeAll();
+    contenedorPrincipal.add(contenedorProveedores);
+    actualizarContenido();
   }//GEN-LAST:event_btnProveedoresActionPerformed
 
   private void btnProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosActionPerformed
-		limpiarContenido();
-		contenedorPrincipal.removeAll();
-		contenedorPrincipal.add(contenedorProductos);
-		actualizarContenido();
+    limpiarContenido();
+    contenedorPrincipal.removeAll();
+    contenedorPrincipal.add(contenedorProductos);
+    actualizarContenido();
   }//GEN-LAST:event_btnProductosActionPerformed
 
   private void btnEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmpleadosActionPerformed
-		limpiarContenido();
-		contenedorPrincipal.removeAll();
-		contenedorPrincipal.add(contenedorEmpleados);
-		actualizarContenido();
+    limpiarContenido();
+    contenedorPrincipal.removeAll();
+    contenedorPrincipal.add(contenedorEmpleados);
+    actualizarContenido();
   }//GEN-LAST:event_btnEmpleadosActionPerformed
 
   private void btnCorteCajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCorteCajaActionPerformed
-		limpiarContenido();
-		contenedorPrincipal.removeAll();
-		contenedorPrincipal.add(contenedorCorteCaja);
-		actualizarContenido();
+    limpiarContenido();
+    contenedorPrincipal.removeAll();
+    contenedorPrincipal.add(contenedorCorteCaja);
+    actualizarContenido();
   }//GEN-LAST:event_btnCorteCajaActionPerformed
 
-public void limpiarContenido() {
-	Component componente = contenedorPrincipal.getComponent(0);
-	contenedorPrincipal.remove(componente);
-	actualizarContenido();
-}
+  private void btnPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPedidoActionPerformed
+    limpiarContenido();
+    contenedorPrincipal.removeAll();
+    contenedorPrincipal.add(contenedorPedido);
+    actualizarContenido();
+  }//GEN-LAST:event_btnPedidoActionPerformed
 
-public void actualizarContenido() {
-	contenedorPrincipal.revalidate();
-	contenedorPrincipal.repaint();
-}
+  public void limpiarContenido() {
+    Component componente = contenedorPrincipal.getComponent(0);
+    contenedorPrincipal.remove(componente);
+    actualizarContenido();
+  }
 
-public static void main(String args[]) {
+  public void actualizarContenido() {
+    contenedorPrincipal.revalidate();
+    contenedorPrincipal.repaint();
+  }
 
-	try {
-		for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-			if ("Nimbus".equals(info.getName())) {
-				javax.swing.UIManager.setLookAndFeel(info.getClassName());
-				break;
-			}
-		}
-	} catch (ClassNotFoundException ex) {
-		java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-	} catch (InstantiationException ex) {
-		java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-	} catch (IllegalAccessException ex) {
-		java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-	} catch (javax.swing.UnsupportedLookAndFeelException ex) {
-		java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-	}
-	//</editor-fold>
-	//</editor-fold>
-	//</editor-fold>
-	//</editor-fold>
+  public static void main(String args[]) {
 
-	java.awt.EventQueue.invokeLater(new Runnable() {
-	public void run() {
-		new VentanaPrincipal().setVisible(true);
+    try {
+      for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+        if ("Nimbus".equals(info.getName())) {
+          javax.swing.UIManager.setLookAndFeel(info.getClassName());
+          break;
+        }
+      }
+    } catch (ClassNotFoundException ex) {
+      java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    } catch (InstantiationException ex) {
+      java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    } catch (IllegalAccessException ex) {
+      java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+      java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    }
+    //</editor-fold>
+    //</editor-fold>
+    //</editor-fold>
+    //</editor-fold>
 
-	}
-	});
-}
+    java.awt.EventQueue.invokeLater(new Runnable() {
+      public void run() {
+        new VentanaPrincipal().setVisible(true);
+
+      }
+    });
+  }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JButton btnAsistencia;
   private javax.swing.JButton btnCorteCaja;
   private javax.swing.JButton btnEmpleados;
+  private javax.swing.JButton btnPedido;
   private javax.swing.JButton btnProductos;
   private javax.swing.JButton btnProveedores;
   private javax.swing.JButton btnVenta;
